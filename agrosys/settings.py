@@ -31,7 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'app',
+    'diagnosticoRecomendacaoTecnica',
+    'responsaveisTecnicos',
+    'localDevolucao',
+    'produtorRural',
+    'propriedade',
+    'epi',
+    'mip',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
