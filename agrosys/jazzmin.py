@@ -24,7 +24,7 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the library",
+    "welcome_sign": "Bem vindo à Agrosys",
 
     # Copyright on the footer
     "copyright": "Acme Library Ltd",

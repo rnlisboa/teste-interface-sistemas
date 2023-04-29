@@ -33,11 +33,9 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'diagnosticoRecomendacaoTecnica',
     'responsaveisTecnicos',
-    'localDevolucao',
+    'classeToxicologica',
     'produtorRural',
     'propriedade',
-    'epi',
-    'mip',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',

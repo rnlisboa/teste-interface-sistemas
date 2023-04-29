@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MipConfig(AppConfig):
+class ClassetoxicologicaConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'mip'
+    name = 'classeToxicologica'
