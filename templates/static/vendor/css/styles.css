@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+   
+    width: 1750px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    
+}
+
+header .receita-text{
+    width: 80%;
+    border-radius: .5rem;
+    background-color: rgb(213, 230, 221);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+}
+
+header .receita-text .title{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+header .receita-info{
+    width: 230px;
+    height: 100%;
+
+}
+
+header .receita-info .art{
+    display: flex;
+    justify-content: space-around;
+}
+
+header .receita-info .art .receita-key{
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/** SECTION **/
+
+section{
+    border: 1px solid #00000080;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+section .section-header{
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+}
+
+section .content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+section .content .table{
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+}
+
+section .content .table .receita-key{
+    font-weight: bold;
+}
+
+
+
+/**********************/
+
+.warning{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 3rem;
+}
+
+.data{
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+}
+
+.assignature{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.assignature .name1{
+    width: 40%;
+}
+.assignature .name1 .name{
+    text-align: center;
+}
+.assignature .name1 .sub{
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+
+
+
+.assignature .name2 .name2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.precaucoes{
+    text-align: center;
+}

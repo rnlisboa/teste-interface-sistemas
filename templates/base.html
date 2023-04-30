@@ -1,0 +1,22 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title>{%block titulo %} Vizualização de documento {%endblock%}</title>
+
+    {% include 'parciais/_head.html'%}
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        
+        {%block 'conteudo' %}{%endblock%}
+  
+    </div>
+    {% include 'parciais/_footer.html'%}
+</body>
+
+</html>
