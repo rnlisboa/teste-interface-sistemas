@@ -32,7 +32,7 @@ class ResponsaveisTecnicosAdmin(admin.ModelAdmin):
     list_display_links = ('id','nome',)
 
 
-@admin.register(Receita)
+@admin.register(Receituario)
 class ReceitaAdmin(admin.ModelAdmin):
     list_display = ('id','responsavel_tecnico','produtor_rural',)
     list_display_links = ('id','responsavel_tecnico','produtor_rural',)
@@ -41,7 +41,7 @@ class ReceitaAdmin(admin.ModelAdmin):
         url = reverse('visualizar_documento') + '?' + urlencode({'receita_id': queryset.first()})
         return HttpResponseRedirect(url)
 
-    gerar_receita.short_description = 'Gerar Receita'
+    gerar_receita.short_description = 'Gerar Receituário'
 
     actions = ['gerar_receita']
 

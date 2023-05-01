@@ -13,9 +13,9 @@ class DocumentView(View):
         
         if receita_id:
             try:
-                receita = Receita.objects.get(pk=receita_id)
+                receita = Receituario.objects.get(pk=receita_id)
                 print(receita)
-            except Receita.DoesNotExist:
+            except Receituario.DoesNotExist:
                 return HttpResponse("Receita não encontrada.")
         else:
             return HttpResponse("ID da receita não fornecido.")
@@ -29,8 +29,8 @@ class ReceitaModelPrecautions(View):
         receita_id = request.GET.get('receita_id')
         if receita_id:
             try:
-                receita = Receita.objects.get(pk=receita_id)
-            except Receita.DoesNotExist:
+                receita = Receituario.objects.get(pk=receita_id)
+            except Receituario.DoesNotExist:
                 return HttpResponse("Receita não encontrada.")
         else:
             return HttpResponse("ID da receita não fornecido.")
@@ -44,8 +44,8 @@ class ReceitaModel(View):
         receita_id = request.GET.get('receita_id')
         if receita_id:
             try:
-                receita = Receita.objects.get(pk=receita_id)
-            except Receita.DoesNotExist:
+                receita = Receituario.objects.get(pk=receita_id)
+            except Receituario.DoesNotExist:
                 return HttpResponse("Receita não encontrada.")
         else:
             return HttpResponse("ID da receita não fornecido.")
@@ -57,7 +57,7 @@ class ReceitaModel(View):
 def generate_precautions_pdf(request, id):
     data = {'name': 'receita'}
 
-    receita = Receita.objects.get(pk=id)
+    receita = Receituario.objects.get(pk=id)
 
     context = {
         'receita': receita,
@@ -78,7 +78,7 @@ def generate_precautions_pdf(request, id):
 def generate_pdf(request, id):
     data = {'name': 'receita'}
 
-    receita = Receita.objects.get(pk=id)
+    receita = Receituario.objects.get(pk=id)
 
     context = {
         'receita': receita,

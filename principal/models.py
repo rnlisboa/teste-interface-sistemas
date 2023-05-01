@@ -80,7 +80,7 @@ class DiagnosticoRecomendacaoTecnica(models.Model):
     class Meta:
         verbose_name_plural = "Diaginósticos e recomendações técnicas"
 
-class Receita(models.Model):
+class Receituario(models.Model):
     responsavel_tecnico = models.ForeignKey(ResponsaveisTecnicos, null=True, on_delete=models.SET_NULL, verbose_name="Responsável técnico")
     produtor_rural = models.ForeignKey(ProdutorRural, null=True, on_delete=models.SET_NULL, verbose_name="Produtor rural")
     diagnosticos_recomendacoes = models.ForeignKey(DiagnosticoRecomendacaoTecnica, null=True, on_delete=models.SET_NULL, verbose_name="Diagnóstico e recomendaçõe técnica")
@@ -88,5 +88,6 @@ class Receita(models.Model):
     def __str__(self):
         return f"{self.id}"
 
-
+    class Meta:
+        verbose_name_plural = "Receituário"
 
