@@ -128,3 +128,5 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = JAZZMIN_SETTINGS
+
+WEASYPRINT_CSS_LOOPBACK = True
