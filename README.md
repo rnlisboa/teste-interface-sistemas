@@ -59,7 +59,7 @@ pip3 install weasyprint
 2. email: admin@email.com
 3. senha: 1234
 
-### Ao logar, você será redirecionado para a dashboardo do sistema
+### Ao logar, você será redirecionado para a dashboard do sistema
 
 ## Cadastro de receituário
 
