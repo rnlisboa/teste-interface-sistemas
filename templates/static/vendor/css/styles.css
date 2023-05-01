@@ -4,29 +4,22 @@
     box-sizing: border-box;
 }
 
-
 .container{
-   
-    width: 1750px;
+    width: 960px;
     margin: 0 auto;
 }
 
 header{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow: auto;
     padding: 1.5rem 0;
-    
 }
 
 header .receita-text{
     width: 80%;
     border-radius: .5rem;
     background-color: rgb(213, 230, 221);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    float: left;
     height: 5rem;
 }
 
@@ -37,60 +30,71 @@ header .receita-text .title{
 
 header .receita-info{
     width: 230px;
+    float: right;
     height: 100%;
-
 }
 
 header .receita-info .art{
-    display: flex;
-    justify-content: space-around;
+    display: block;
 }
 
 header .receita-info .art .receita-key{
     font-weight: bold;
+    display: inline;
 }
 
-
-
-
-
-
-
-
+header .receita-info .art .receita-value{
+    display: inline;
+}
 /** SECTION **/
 
-section{
-    border: 1px solid #00000080;
+section {
+    border-top: 1px solid #00000080;
+    border-bottom: 1px solid #00000080;
+    border-right: 1px solid #00000080;
+    border-left: 1px solid #00000080;
     border-radius: .5rem;
     padding: 1rem;
     margin: 2rem 0;
+    overflow: hidden;
 }
 
-section .section-header{
+section .section-header {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
-section .content{
+section .content {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
 }
 
-section .content .table{
+section .content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section .content .table {
     width: fit-content;
-    display: flex;
-    gap: 1rem;
-}
+    display: inline-block;
+    margin-right: 1rem;
+  }
 
-section .content .table .receita-key{
+section .content .table .receita-key {
     font-weight: bold;
+    display: inline;
+}
+section .content .table .receita-value {
+    display: inline;
 }
 
-
+section .content .info {
+    float: left;
+    width: 150px;
+    text-align: right;
+}
 
 /**********************/
 
@@ -111,28 +115,40 @@ section .content .table .receita-key{
 .assignature{
     width: 100%;
     height: 4rem;
-    display: flex;
-    justify-content: space-between;
+    margin-bottom: 6rem;
 }
+
 .assignature .name1{
     width: 40%;
+    float: left;
 }
+
+
+
 .assignature .name1 .name{
     text-align: center;
 }
+
 .assignature .name1 .sub{
     border-bottom: 1px solid #000;
     width: 100%;
 }
 
-
-
-.assignature .name2 .name2 {
-    display: flex;
-    align-items: flex-start;
+.assignature .name2{
+    width: 100%;
+    float: right;
 }
 
+.assignature .name2 .name{
+    text-align: center;
+}
+
+.assignature .name2 .sub{
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
 
 .precaucoes{
     text-align: center;
 }
+

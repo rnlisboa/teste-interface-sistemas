@@ -47,7 +47,7 @@
             </div>
 
             <div class="receita-value" style="text-transform: uppercase;">
-                joão da silva
+                {{receita.responsavel_tecnico.nome}}
             </div>
         </div>
         <div class="table">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="receita-value">
-                613.339.040-96
+                {{receita.responsavel_tecnico.cnpj}}
             </div>
         </div>
         <div class="table">
@@ -65,7 +65,7 @@
             </div>
 
             <div class="receita-value">
-                61333904096
+                {{receita.responsavel_tecnico.numero_registro}}
             </div>
         </div>
     </div>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="receita-value" style="text-transform: uppercase;">
-                paulo dos santos
+                {{receita.produtor_rural.nome}}
             </div>
         </div>
         <div class="table">
@@ -103,7 +103,7 @@
             </div>
 
             <div class="receita-value">
-                FAZENDA DOS SANTOS
+                {{receita.produtor_rural.propriedade.descricao}}
             </div>
         </div>
         <div class="table">
@@ -112,7 +112,7 @@
             </div>
 
             <div class="receita-value">
-                613.339.040-96
+                {{receita.produtor_rural.propriedade.cnpj}}
             </div>
         </div>
     </div>
@@ -123,7 +123,7 @@
             </div>
 
             <div class="receita-value">
-                Praça Osvaldo Cruz, 1234 - Centro Histórico, Porto Alegre, RS
+                {{receita.produtor_rural.propriedade.local}}
             </div>
         </div>
         <div class="table">
@@ -132,7 +132,7 @@
             </div>
 
             <div class="receita-value">
-                -30.033056
+                {{receita.produtor_rural.propriedade.latitude}}
             </div>
         </div>
         <div class="table">
@@ -141,7 +141,7 @@
             </div>
 
             <div class="receita-value">
-                -30.033056
+                {{receita.produtor_rural.propriedade.longitude}}
             </div>
         </div>
     </div>
@@ -158,7 +158,7 @@
             </div>
 
             <div class="receita-value">
-                Milho
+                {{receita.diagnosticos_recomendacoes.cultura}}
             </div>
         </div>
         <div class="table">
@@ -167,7 +167,7 @@
             </div>
 
             <div class="receita-value">
-                Amendoim-bravo (Euphorbia heterophylla)
+                {{receita.diagnosticos_recomendacoes.alvo}}
             </div>
         </div>
     </div>
@@ -178,8 +178,7 @@
             </div>
 
             <div class="receita-value">
-                2,4-D 806 SL Alamos (2,4-D, Equivalente
-                ácido de 2,4-D 670 g/L)
+                {{receita.diagnosticos_recomendacoes.produto_comercial}}
             </div>
         </div>
         <div class="table">
@@ -188,7 +187,7 @@
             </div>
 
             <div class="receita-value">
-                Categoria 4: Produto Pouco Tóxico
+                Categoria: {{receita.diagnosticos_recomendacoes.classe_toxicologica.nivel_categoria}} ({{receita.diagnosticos_recomendacoes.classe_toxicologica.descricao}})
             </div>
         </div>
     </div>
@@ -199,7 +198,7 @@
             </div>
 
             <div class="receita-value">
-                10 ha
+                {{receita.diagnosticos_recomendacoes.area_a_tratar}}
             </div>
         </div>
         <div class="table">
@@ -208,7 +207,7 @@
             </div>
 
             <div class="receita-value">
-                1 L/ha
+                {{receita.diagnosticos_recomendacoes.dosagem}}
             </div>
         </div>
         <div class="table">
@@ -217,7 +216,7 @@
             </div>
 
             <div class="receita-value">
-                10 L
+                {{receita.diagnosticos_recomendacoes.quantidade_a_adquirir}}
             </div>
         </div>
         <div class="table">
@@ -226,7 +225,7 @@
             </div>
 
             <div class="receita-value">
-                1
+                {{receita.diagnosticos_recomendacoes.numero_aplicacoes}}
             </div>
         </div>
     </div>
@@ -237,7 +236,7 @@
             </div>
 
             <div class="receita-value">
-                180 a 360 L de calda/ha
+                {{receita.diagnosticos_recomendacoes.volume_da_calda}}
             </div>
         </div>
         <div class="table">
@@ -246,7 +245,7 @@
             </div>
 
             <div class="receita-value">
-                Não determinado
+                {{receita.diagnosticos_recomendacoes.intervalo_de_seguranca}}
             </div>
         </div>
     </div>
@@ -257,7 +256,7 @@
             </div>
 
             <div class="receita-value">
-                Pulverizacao tratorizada
+                {{receita.diagnosticos_recomendacoes.modalidade_aplicacao}}
             </div>
         </div>
         <div class="table">
@@ -266,9 +265,21 @@
             </div>
 
             <div class="receita-value">
-                CANELA
+                {{receita.diagnosticos_recomendacoes.equipamento_aplicacao}}
             </div>
         </div>
+    </div>
+    <div class="content">
+        <div class="table">
+            <div class="receita-key">
+                Época de aplicação:
+            </div>
+
+            <div class="receita-value">
+                {{receita.diagnosticos_recomendacoes.epoca_aplicacao}}
+            </div>
+        </div>
+        
     </div>
 
     <div class="section-header obs">
@@ -276,18 +287,18 @@
     </div>
 
     <div class="content">
-        TERMO DE CONHECIMENTO DE RISCO E DE RESPONSABILIDADE <br><br>
+        TERMO DE CONHECIMENTO DE RISCO E DE RESPONSABILIDADE <br/>
         O produtor acima idenficado está ciente que os produtos agrotóxicos hormonais, inclusive os produtos com
         ingrediente avo a base de ácido 2,4-
         diclorofenoxiacéco (2,4-D), em caso de deriva, causam grandes prejuízos para as culturas sensíveis. O produtor
         fica ciente que somente poderá
-        aplicar os produtos agrotóxicos hormonais respeitando as seguintes condições meteorológicas:<br>
-        - Velocidade do Vento menor que 10 Km/h;<br>
-        - Umidade Relava do Ar superior a 55%;<br>
-        - Temperatura ambiente menor que 30ºC.<br>
+        aplicar os produtos agrotóxicos hormonais respeitando as seguintes condições meteorológicas:<br/>
+        - Velocidade do Vento menor que 10 Km/h;<br/>
+        - Umidade Relava do Ar superior a 55%;<br/>
+        - Temperatura ambiente menor que 30ºC.<br/>
         No caso de recomendações específicas previstas na bula do produto, estas deverão ser obrigatoriamente seguidas.
         Em caso de omissão, deverão
-        ser adotados os parâmetros gerais acima elencados.<br>
+        ser adotados os parâmetros gerais acima elencados.<br/>
         O produtor fica ciente de que o equipamento ulizado para aplicação de agrotóxicos hormonais deverá estar em
         condições técnicas adequadas,
         inclusive com bicos compaveis, conforme a recomendação do fabricante do produto agrotóxico.
@@ -301,13 +312,13 @@
     </div>
 
     <div class="content">
-        <br>Os tratamentos fitossanitários deverão ser feitos com rigorosa observância dos cuidados e das recomendações técnicas, no sendo de garanr a
+        <br/>Os tratamentos fitossanitários deverão ser feitos com rigorosa observância dos cuidados e das recomendações técnicas, no sendo de garanr a
         eficiência do tratamento, e não ocasionar danos à saúde pública, ao meio ambiente e às explorações agropecuárias circunvizinhas, bem como, à
         qualidade dos produtos obdos. Não é permida a aplicação aérea de agrotóxicos e outros biocidas em áreas situadas a uma distância mínima de
         500 metros adjacente a mananciais de captação de água para abastecimento de populações, núcleos populacionais, escolas, habitações e locais de
         recreação, e, de 250 metros adjacentes a mananciais de água, moradias isoladas e agrupamento de animais e culturas suscepveis a danos. Será
         permida, porém, aplicação de agrotóxicos e biocidas nas lavouras, se efetuada por atomizadores ou canhões, numa distância mínima de 250
-        metros e, por aparelhos costais ou tratorizados de barra, numa distância mínima de 50 metros dos locais acima mencionados. <br><br>
+        metros e, por aparelhos costais ou tratorizados de barra, numa distância mínima de 50 metros dos locais acima mencionados. <br/><br/>
         
 
         Em todos os casos as aplicações somente poderão ser feitas quando a direção do vento for tal que não leve resíduos de agrotóxicos e biocidas para
@@ -320,7 +331,7 @@
         sensíveis. Dessa forma, não aplique quando houver possibilidade de angir estas culturas. Não aplique o produto na presença de ventos fortes e
         nas horas mais quentes do dia. Quando o herbicida é usado na pós-emergência das culturas indicadas, não deve ser adicionado adjuvante na calda.
         Aplique somente as doses recomendadas e observe o intervalo de segurança (intervalo de tempo entre a úlma aplicação e a colheita). Para
-        aplicação tratorizada, o mesmo indivíduo não pode realizar as avidades de mistura, abastecimento e aplicação.<br>
+        aplicação tratorizada, o mesmo indivíduo não pode realizar as avidades de mistura, abastecimento e aplicação.<br/>
     </div>
 </section>
 
@@ -331,7 +342,7 @@
     </div>
 
     <div class="content">
-        <br>É obrigatório o uso de EPI em todas as operações de uso, seguindo indicações do fabricante, condas no rótulo e na bula do produto.<br>
+        <br/>É obrigatório o uso de EPI em todas as operações de uso, seguindo indicações do fabricante, condas no rótulo e na bula do produto.<br/>
     </div>
 </section>
 
@@ -343,9 +354,9 @@
     </div>
 
     <div class="content">
-        <br>Recomenda-se o manejo integrado de pragas, envolvendo todos os princípios e medidas disponíveis e viáveis de controle, como o uso de agentes
+        <br/>Recomenda-se o manejo integrado de pragas, envolvendo todos os princípios e medidas disponíveis e viáveis de controle, como o uso de agentes
         biológicos. Implementar estratégias de manejo de resistência, ulizando produtos com diferentes mecanismos de ação, diminuindo resistência do
-        alvo e minimizando a chance dos agentes de controle ficarem menos efevo ao longo do tempo.<br>
+        alvo e minimizando a chance dos agentes de controle ficarem menos efevo ao longo do tempo.<br/>
     </div>
 </section>
 
@@ -357,7 +368,7 @@
     </div>
 
     <div class="content">
-        <br> ESTÁBULO - Rua Santo Antônio, 123 - Floresta, Porto Alegre - RS<br>
+        <br/> ESTÁBULO - Rua Santo Antônio, 123 - Floresta, Porto Alegre - RS<br/>
     </div>
 </section>
 
@@ -370,12 +381,12 @@
 </div>
 
 <div class="assignature">
-    <div class="name1">
+    <div class="name1" style="margin-right: 100px;margin-left: 10px;">
         <div class="sub">
             
         </div>
-        <div class="name"  style="font-weight: bold;">
-            PAULO DOS SANTOS
+        <div class="name"  style="font-weight: bold;text-transform: uppercase;">
+            {{receita.produtor_rural.nome}}
         </div>
     </div>
 
@@ -388,9 +399,9 @@
                 Responsável técnico:
             </span>
 
-            <span class="respname" style="font-weight: bold;"> 
-                JOÃO DA SILVA
-            </span><br>
+            <span class="respname" style="font-weight: bold;" style="display: inline;text-transform: uppercase;"> 
+                {{receita.responsavel_tecnico.nome}}
+            </span><br/>
 
             <span class="resp">
                 CPF:
@@ -398,7 +409,7 @@
 
             <span class="respname">
                 613.339.040-96
-            </span><br>
+            </span><br/>
 
             <span class="resp">
                 Número do registro (CREA/CFTA):
@@ -420,46 +431,46 @@
     </div>
 
     <div class="content">
-        <br><br>1. Este produto é para uso EXCLUSIVAMENTE agrícola.<br>
-        2. Somente ulize o produto para a cultura, o alvo e as doses recomendadas.<br>
-        3. Respeitar o intervalo de segurança (período entre a úlma aplicação do produto e a colheita).<br>
-        4. Aplicar o produto, preferencialmente, nas horas mais frescas do dia, evitando-se dias chuvosos e com ventos fortes.<br>
-        5. É de inteira responsabilidade do usuário, a ulização que não siga as orientações do fabricante e responsável técnico.<br>
+        <br/><br/>1. Este produto é para uso EXCLUSIVAMENTE agrícola.<br/>
+        2. Somente ulize o produto para a cultura, o alvo e as doses recomendadas.<br/>
+        3. Respeitar o intervalo de segurança (período entre a úlma aplicação do produto e a colheita).<br/>
+        4. Aplicar o produto, preferencialmente, nas horas mais frescas do dia, evitando-se dias chuvosos e com ventos fortes.<br/>
+        5. É de inteira responsabilidade do usuário, a ulização que não siga as orientações do fabricante e responsável técnico.<br/>
         6. Não manuseie ou aplique o produto sem os equipamentos de proteção individual (EPI) recomendados pelo
-        fabricando no preparo da calda e na aplicação do produto.<br>
+        fabricando no preparo da calda e na aplicação do produto.<br/>
         7. Ulize os equipamentos de proteção individual (EPI), tais como: macacão com tratamento hidrorrepelente com
         mangas compridas passando por cima do punho das luvas e as pernas das calças por cima das botas; botas de borracha;
         avental impermeável; máscara com filtro específico; óculos de segurança com proteção lateral e luvas de nitrila,
-        devendo ser vesdos e rerados na ordem correta, conforme pictogramas condos no rótulo e bula do produto.<br>
-        8. Não ulize equipamentos de proteção individual (EPI) danificados.<br>
-        9. Sempre ulize equipamento de proteção com cerficado de aprovação (CA) e dentro do vencimento.<br>
+        devendo ser vesdos e rerados na ordem correta, conforme pictogramas condos no rótulo e bula do produto.<br/>
+        8. Não ulize equipamentos de proteção individual (EPI) danificados.<br/>
+        9. Sempre ulize equipamento de proteção com cerficado de aprovação (CA) e dentro do vencimento.<br/>
         10. Não coma, não beba e não fume durante o manuseio e aplicação do produto.<br>
-        11. Manuseie o produto em local aberto e venlado.<br>
-        12. Não ulize equipamento com vazamentos ou defeitos. Mantenha a regulagem do equipamento e dos bicos.<br>
-        13. Não desentupa bicos, oricios e válvulas com a boca.<br>
-        14. Não transporte ou armazene o produto juntamente com alimentos, medicamentos, rações, animais e pessoas.<br>
-        15. Para o transporte do produto, deve-se respeitar legislação vigente específica.<br>
+        11. Manuseie o produto em local aberto e venlado.<br/>
+        12. Não ulize equipamento com vazamentos ou defeitos. Mantenha a regulagem do equipamento e dos bicos.<br/>
+        13. Não desentupa bicos, oricios e válvulas com a boca.<br/>
+        14. Não transporte ou armazene o produto juntamente com alimentos, medicamentos, rações, animais e pessoas.<br/>
+        15. Para o transporte do produto, deve-se respeitar legislação vigente específica.<br/>
         16. Não permita a entrada de pessoas, animais e pessoas estranhas no local onde o produto foi aplicado, respeitando o
         período de reentrada, prescrita em bula. Se houver necessidade de reentrar na área antes desse período, deve-se usar
-        os mesmos EPIs ulizados na aplicação.<br>
+        os mesmos EPIs ulizados na aplicação.<br/>
         17. O depósito dos agrotóxicos deve seguir recomendações da norma técnica ABNT 9843, devendo ser exclusivo para
         agrotóxicos, permanecer fechado, idenficado com placa “Cuidado Veneno” e permido entrada somente de pessoas
-        autorizadas, etc.<br>
+        autorizadas, etc.<br/>
         18. Caso ocorra contato acidental da pessoa com o produto, siga as orientações descritas em primeiros socorros e
         procure rapidamente um serviço médico de emergência, levando este receituário, a bula ou Ficha de Informações de
-        Produtos Químicos (FISPQ).<br>
+        Produtos Químicos (FISPQ).<br/>
         19. Após as aplicações, lave as luvas para evitar contaminação. Deve-se tomar banho imediatamente com água fria e
-        sabão neutro e colocar roupas limpas.<br>
+        sabão neutro e colocar roupas limpas.<br/>
         20. Nunca reulize a embalagem vazia ou fracione o produto. Mantenha-o na embalagem original e sempre fechado.
         21. Tríplice Lavagem: O operador deverá ulizar os mesmos EPIs recomendados para a aplicação do produto e seguir os
         passos: Esvazie completamente o conteúdo da embalagem no tanque do pulverizador, mantendo-o na posição vercal
         durante 30 segundos. Adicione água limpa à embalagem até ¼ do seu volume. Tampe bem a embalagem e agite-a, por
         30 segundos. Despeje a água de lavagem no tanque pulverizador. Faça esta operação três vezes. Inulize a embalagem
-        plásca ou metálica perfurando o fundo.<br>
+        plásca ou metálica perfurando o fundo.<br/>
         22. Devolver as embalagens vazias lavadas em local indicado na nota fiscal ou nesse receituário.
         23. Desnação final de resíduos e embalagens vazias: A desnação final das embalagens vazias, após a devolução pelos
         usuários, somente poderá ser realizada pela Empresa Registrante ou por empresas legalmente autorizadas pelos órgãos
-        competentes.<br>
+        competentes.<br/>
     </div>
 </section>
 
