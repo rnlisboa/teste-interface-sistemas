@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.container{
+.container {
     width: 960px;
     margin: 0 auto;
 }
 
-header{
+header {
     width: 100%;
     overflow: auto;
     padding: 1.5rem 0;
 }
 
-header .receita-text{
+header .receita-text {
     width: 80%;
     border-radius: .5rem;
     background-color: rgb(213, 230, 221);
@@ -23,29 +23,30 @@ header .receita-text{
     height: 5rem;
 }
 
-header .receita-text .title{
+header .receita-text .title {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-header .receita-info{
+header .receita-info {
     width: 230px;
     float: right;
     height: 100%;
 }
 
-header .receita-info .art{
+header .receita-info .art {
     display: block;
 }
 
-header .receita-info .art .receita-key{
+header .receita-info .art .receita-key {
     font-weight: bold;
     display: inline;
 }
 
-header .receita-info .art .receita-value{
+header .receita-info .art .receita-value {
     display: inline;
 }
+
 /** SECTION **/
 
 section {
@@ -80,12 +81,13 @@ section .content .table {
     width: fit-content;
     display: inline-block;
     margin-right: 1rem;
-  }
+}
 
 section .content .table .receita-key {
     font-weight: bold;
     display: inline;
 }
+
 section .content .table .receita-value {
     display: inline;
 }
@@ -98,7 +100,7 @@ section .content .info {
 
 /**********************/
 
-.warning{
+.warning {
     width: 100%;
     text-align: center;
     text-transform: uppercase;
@@ -106,49 +108,100 @@ section .content .info {
     margin: 3rem;
 }
 
-.data{
+.data {
     width: 100%;
     text-align: center;
     margin: 2rem;
 }
 
-.assignature{
+.assignature {
     width: 100%;
     height: 4rem;
     margin-bottom: 6rem;
 }
 
-.assignature .name1{
+.assignature .name1 {
     width: 40%;
     float: left;
 }
 
 
 
-.assignature .name1 .name{
+.assignature .name1 .name {
     text-align: center;
 }
 
-.assignature .name1 .sub{
+.assignature .name1 .sub {
     border-bottom: 1px solid #000;
     width: 100%;
 }
 
-.assignature .name2{
+.assignature .name2 {
     width: 100%;
     float: right;
 }
 
-.assignature .name2 .name{
+.assignature .name2 .name {
     text-align: center;
 }
 
-.assignature .name2 .sub{
+.assignature .name2 .sub {
     border-bottom: 1px solid #000;
     width: 100%;
 }
 
-.precaucoes{
+.precaucoes {
     text-align: center;
 }
 
+/**************/
+#botao {
+    width: 6rem;
+    border: 1px solid #000;
+    border-radius: .3rem;
+    height: 2rem;
+    outline: none;
+}
+
+#mensagem {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#mensagem p {
+    margin: 0;
+}
+
+#mensagem button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#mensagem button:hover {
+    background-color: #3e8e41;
+}
+
+#sim {
+    background-color: #4CAF50;
+}
+
+#nao {
+    background-color: #f44336;
+}
+
+#sim a, #nao a  {
+    text-decoration: none;
+    color: #fff;
+  }

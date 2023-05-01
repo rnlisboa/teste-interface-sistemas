@@ -2,15 +2,6 @@
 
 {%block 'conteudo'%}
 
-<button id="botao" style="margin-top: 2rem;">Imprimir</button>
-<div id="mensagem" style="display:none;">
-    <p class="mensagem">Deseja imprimir as precauções de uso?</p>
-    <button id="sim">
-    <a href="{% url 'precautions' receita.id%}">Sim</a>    
-    </button>
-    <button id="nao"><a href="{% url 'no-precautions' receita.id%}">Não</a></button>
-</div>
-
 <header>
     <div class="logo">
         RAIZ
@@ -483,22 +474,5 @@
     </div>
 </section>
 
-
-
-
-<script>
-    $(document).ready(function(){
-    $('#botao').click(function(){
-        $('#mensagem').show();
-    });
-    $('#sim').click(function(){
-        // insira aqui o código para imprimir as precauções de uso
-        $('#mensagem').hide();
-    });
-    $('#nao').click(function(){
-        $('#mensagem').hide();
-    });
-});
-</script>
 
 {%endblock%}

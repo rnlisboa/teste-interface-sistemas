@@ -2,15 +2,6 @@
 
 {%block 'conteudo'%}
 
-<button id="botao" style="margin-top: 2rem;">Imprimir</button>
-<div id="mensagem" style="display:none;">
-    <p class="mensagem">Deseja imprimir as precauções de uso?</p>
-    <button id="sim">
-    <a href="{% url 'precautions' receita.id%}">Sim</a>    
-    </button>
-    <button id="nao"><a href="{% url 'no-precautions' receita.id%}">Não</a></button>
-</div>
-
 <header>
     <div class="logo">
         RAIZ
@@ -433,72 +424,6 @@
     </div>
 </div>
 
-<section>
 
-    <div class="section-header precaucoes">
-        PRECAUÇÕES DE USO E OUTRAS ORIENTAÇÕES
-    </div>
-
-    <div class="content">
-        <br/><br/>1. Este produto é para uso EXCLUSIVAMENTE agrícola.<br/>
-        2. Somente ulize o produto para a cultura, o alvo e as doses recomendadas.<br/>
-        3. Respeitar o intervalo de segurança (período entre a úlma aplicação do produto e a colheita).<br/>
-        4. Aplicar o produto, preferencialmente, nas horas mais frescas do dia, evitando-se dias chuvosos e com ventos fortes.<br/>
-        5. É de inteira responsabilidade do usuário, a ulização que não siga as orientações do fabricante e responsável técnico.<br/>
-        6. Não manuseie ou aplique o produto sem os equipamentos de proteção individual (EPI) recomendados pelo
-        fabricando no preparo da calda e na aplicação do produto.<br/>
-        7. Ulize os equipamentos de proteção individual (EPI), tais como: macacão com tratamento hidrorrepelente com
-        mangas compridas passando por cima do punho das luvas e as pernas das calças por cima das botas; botas de borracha;
-        avental impermeável; máscara com filtro específico; óculos de segurança com proteção lateral e luvas de nitrila,
-        devendo ser vesdos e rerados na ordem correta, conforme pictogramas condos no rótulo e bula do produto.<br/>
-        8. Não ulize equipamentos de proteção individual (EPI) danificados.<br/>
-        9. Sempre ulize equipamento de proteção com cerficado de aprovação (CA) e dentro do vencimento.<br/>
-        10. Não coma, não beba e não fume durante o manuseio e aplicação do produto.<br>
-        11. Manuseie o produto em local aberto e venlado.<br/>
-        12. Não ulize equipamento com vazamentos ou defeitos. Mantenha a regulagem do equipamento e dos bicos.<br/>
-        13. Não desentupa bicos, oricios e válvulas com a boca.<br/>
-        14. Não transporte ou armazene o produto juntamente com alimentos, medicamentos, rações, animais e pessoas.<br/>
-        15. Para o transporte do produto, deve-se respeitar legislação vigente específica.<br/>
-        16. Não permita a entrada de pessoas, animais e pessoas estranhas no local onde o produto foi aplicado, respeitando o
-        período de reentrada, prescrita em bula. Se houver necessidade de reentrar na área antes desse período, deve-se usar
-        os mesmos EPIs ulizados na aplicação.<br/>
-        17. O depósito dos agrotóxicos deve seguir recomendações da norma técnica ABNT 9843, devendo ser exclusivo para
-        agrotóxicos, permanecer fechado, idenficado com placa “Cuidado Veneno” e permido entrada somente de pessoas
-        autorizadas, etc.<br/>
-        18. Caso ocorra contato acidental da pessoa com o produto, siga as orientações descritas em primeiros socorros e
-        procure rapidamente um serviço médico de emergência, levando este receituário, a bula ou Ficha de Informações de
-        Produtos Químicos (FISPQ).<br/>
-        19. Após as aplicações, lave as luvas para evitar contaminação. Deve-se tomar banho imediatamente com água fria e
-        sabão neutro e colocar roupas limpas.<br/>
-        20. Nunca reulize a embalagem vazia ou fracione o produto. Mantenha-o na embalagem original e sempre fechado.
-        21. Tríplice Lavagem: O operador deverá ulizar os mesmos EPIs recomendados para a aplicação do produto e seguir os
-        passos: Esvazie completamente o conteúdo da embalagem no tanque do pulverizador, mantendo-o na posição vercal
-        durante 30 segundos. Adicione água limpa à embalagem até ¼ do seu volume. Tampe bem a embalagem e agite-a, por
-        30 segundos. Despeje a água de lavagem no tanque pulverizador. Faça esta operação três vezes. Inulize a embalagem
-        plásca ou metálica perfurando o fundo.<br/>
-        22. Devolver as embalagens vazias lavadas em local indicado na nota fiscal ou nesse receituário.
-        23. Desnação final de resíduos e embalagens vazias: A desnação final das embalagens vazias, após a devolução pelos
-        usuários, somente poderá ser realizada pela Empresa Registrante ou por empresas legalmente autorizadas pelos órgãos
-        competentes.<br/>
-    </div>
-</section>
-
-
-
-
-<script>
-    $(document).ready(function(){
-    $('#botao').click(function(){
-        $('#mensagem').show();
-    });
-    $('#sim').click(function(){
-        // insira aqui o código para imprimir as precauções de uso
-        $('#mensagem').hide();
-    });
-    $('#nao').click(function(){
-        $('#mensagem').hide();
-    });
-});
-</script>
 
 {%endblock%}
