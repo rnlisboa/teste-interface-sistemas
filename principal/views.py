@@ -24,36 +24,6 @@ class DocumentView(View):
             'receita': receita
         })
 
-class ReceitaModelPrecautions(View):
-    def get(self, request, *args, **kwargs):
-        receita_id = request.GET.get('receita_id')
-        if receita_id:
-            try:
-                receita = Receituario.objects.get(pk=receita_id)
-            except Receituario.DoesNotExist:
-                return HttpResponse("Receita não encontrada.")
-        else:
-            return HttpResponse("ID da receita não fornecido.")
-
-        return render(request, 'principal/precautions.html', {
-            'receita': receita
-        })
-
-class ReceitaModel(View):
-    def get(self, request, *args, **kwargs):
-        receita_id = request.GET.get('receita_id')
-        if receita_id:
-            try:
-                receita = Receituario.objects.get(pk=receita_id)
-            except Receituario.DoesNotExist:
-                return HttpResponse("Receita não encontrada.")
-        else:
-            return HttpResponse("ID da receita não fornecido.")
-
-        return render(request, 'principal/no-precautions.html', {
-            'receita': receita
-        })
-    
 def generate_precautions_pdf(request, id):
     data = {'name': 'receita'}
 
