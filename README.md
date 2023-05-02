@@ -37,7 +37,7 @@ python3 manage.py runserver
 brew install cairo pango gdk-pixbuf libffi
 ```
 ```sh
-pip install WeasyPrint
+brew install weasyprint
 ```
  
 
