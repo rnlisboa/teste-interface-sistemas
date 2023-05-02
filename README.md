@@ -37,6 +37,23 @@ nmake -f makefile.msc
 ```
 </p>
 
+<p>
+Abra o prompt de comando do Windows como administrador e execute o seguinte comando para atualizar o pip para a versão mais recente:<br/>
+
+```sh
+python -m pip install --upgrade pip
+```
+Instale as dependências necessárias para a biblioteca WeasyPrint:
+```sh
+python -m pip install cffi cairocffi pycparser
+```
+
+Instale a biblioteca Weasyprint:
+```sh
+python -m pip install WeasyPrint
+```
+</p>
+
 ## Linux/MacOs
 1. Faça download do projeto
 2. No diretório do projeto digite os comandos:
