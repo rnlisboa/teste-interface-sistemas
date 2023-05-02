@@ -31,17 +31,17 @@ python3 manage.py runserver
 ```
 
 
-3. Para MacOs: instale a biblioteca Weasyprint, responsavel pela geração de PDF
+### Para MacOs: instale a biblioteca Weasyprint, responsavel pela geração de PDF
 
 ```sh
 brew install cairo pango gdk-pixbuf libffi
 ```
 ```sh
-pip install WeasyPrint
+brew install weasyprint
 ```
  
 
-4. Para Linux: instale a biblioteca Weasyprint, responsavel pela geração de PDF
+### Para Linux: instale a biblioteca Weasyprint, responsavel pela geração de PDF
 ```sh 
 sudo apt-get install build-essential python3-dev python3-pip python3-setuptools python3-wheel python3-cffi libcairo2 libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info
 ```
