@@ -6,15 +6,18 @@
 1. Faça download do projeto
 2. No diretório do projeto digite os comandos:
 ```sh 
-python -m venv venv</li>
+python -m venv venv
+```
+
+```sh 
+.\venv\scripts\activate
+```
+
+```sh 
+pip install -r requirements.txt
 ```
 ```sh 
-.\venv\scripts\activate</li>
-```
-```sh 
-pip install -r requirements.txt</li>
-```sh 
-python manage.py runserver </li>
+python manage.py runserver 
 ```
 <p>Caso surja a excessão "OSError: cannot load library 'gobject-2.0-0': error 0x7e...", siga o manual de instalação do GTK em https://www.gtk.org/docs/installations/windows/</p>
 <p>
