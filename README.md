@@ -5,13 +5,34 @@
 ## Windows
 1. Faça download do projeto
 2. No diretório do projeto digite os comandos:
-<ol>
-    <li>python -m venv venv</li>
-    <li>.\venv\scripts\activate</li>
-    <li>pip install -r requirements.txt</li>
-    <li>python manage.py runserver </li>
-</ol>
+```sh 
+python -m venv venv</li>
+```
+```sh 
+.\venv\scripts\activate</li>
+```
+```sh 
+pip install -r requirements.txt</li>
+```sh 
+python manage.py runserver </li>
+```
+<p>Caso surja a excessão "OSError: cannot load library 'gobject-2.0-0': error 0x7e...", siga o manual de instalação do GTK em https://www.gtk.org/docs/installations/windows/</p>
+<p>
+Baixe a versão mais recente da biblioteca glib no site oficial: https://developer.gnome.org/glib/. Certifique-se de baixar a versão compatível com a sua arquitetura (32 bits ou 64 bits).<br/>
 
+Extraia o arquivo ZIP baixado para uma pasta de sua escolha.<br/>
+
+Abra o prompt de comando do Windows como administrador e navegue até a pasta onde você extraiu os arquivos.<br/>
+
+Execute os seguintes comandos no prompt de comando:
+<br/>
+```sh
+cd glib-<versão>\glib
+```
+```sh
+nmake -f makefile.msc
+```
+</p>
 
 ## Linux/MacOs
 1. Faça download do projeto
