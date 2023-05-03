@@ -2,6 +2,11 @@
 
 # guia de instalação do projeto
 
+# Docker
+```sh
+docker-compose up -d
+```
+
 ## Windows
 1. Faça download do projeto
 2. No diretório do projeto digite os comandos:
